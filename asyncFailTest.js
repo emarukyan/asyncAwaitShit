@@ -24,17 +24,17 @@ const justBadPromise = () => new Promise((resolve, reject) => {
 
 
 const testBadAsyncWithReject = async () => {
-  await badAsyncWithReject()
+  return await badAsyncWithReject()
 }
 
 const testBadAsyncWithThrow = async () => {
-  await badAsyncWithThrow()
+  return await badAsyncWithThrow()
 }
 
 
 const testBadAsyncWithThrowTryCatch = async () => {
   try {
-    await badAsyncWithThrow()
+    return await badAsyncWithThrow()
   } catch (err) {
     console.log('catched error')
   }
